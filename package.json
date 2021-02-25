@@ -1,0 +1,24 @@
+{
+  "name": "note.wenboz.com",
+  "version": "1.0.0",
+  "description": "Code Note.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "vuepress dev docs",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "author": "boboidream",
+  "repository": "github:boboidream/note",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.7.1",
+    "vuepress-plugin-autobar": "github:boboidream/vuepress-bar",
+    "vuepress-plugin-permalink-pinyin": "^1.0.0",
+    "vuepress-plugin-rpurl": "github:boboidream/vuepress-plugin-rpurl"
+  }
+}
