@@ -14,7 +14,7 @@ module.exports = {
       // { text: 'Blog', link: 'https://www.ruciya.com' }
     ],
     docsDir: '/',
-    lastUpdated: 'Last Updated',
+    // lastUpdated: 'Last Updated',
   },
   plugins: ['permalink-pinyin', ['autobar', {'pinyinNav': true}], 'rpurl'],
   chainWebpack: (config, isServer) => {
