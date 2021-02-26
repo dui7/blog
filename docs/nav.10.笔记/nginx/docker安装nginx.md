@@ -1,27 +1,22 @@
-### Docker安装nginx并设置挂载目录到宿主机  
+# Docker安装nginx  
 查询nginx版本  
 `docker search nginx`  
-拉取nginx1.16版本镜像  
-`docker pull nginx:1.16`  
-启动镜像生成容器  
-`docker run --name nginx-test -p 80:80 -d nginx`  
-创建挂载目录  
-`mkdir -p /data/static /data/nginx/conf`  
-复制容器里的conf到宿主机。6dd4380ba708为CONTAINER ID  
-`docker cp 6dd4380ba708:/etc/nginx/nginx.conf /data/nginx/conf/nginx.conf`  
-停止容器  
-`docker stop 6dd4380ba708`  
-删除容器  
-`docker rm 6dd4380ba708`  
-重新启动一个有挂载目录的镜像  
-`docker run -d -p 80:80 --name visi-nginx -v /data/static:/usr/share/nginx/html -v /data/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /data/nginx/logs:/var/log/nginx nginx  
+拉取最新的nginx版本镜像  
+`docker pull nginx`  
+
+## 创建挂载目录  
+`mkdir -p /data/nginx/html /data/nginx/conf /data/nginx/logs`   
+
+## 启动一个有挂载目录的镜像  
+`docker run -d -p 80:80 --name nginx -v /data/nginx/html:/usr/share/nginx/html -v /data/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /data/nginx/logs:/var/log/nginx nginx  
 `
 > -p 80:80： 将容器的 80 端口映射到主机的 80 端口。  
-> --name visi-nginx：将容器命名为 visi-nginx。  
-> /data/static:/usr/share/nginx/html：将我们自己创建的 /data/static 目录挂载到容器的 /usr/share/nginx/html。  
+> --name nginx：将容器命名为 nginx。  
+> /data/nginx/html:/usr/share/nginx/html：将我们自己创建的 /data/nginx/html 目录挂载到容器的 /usr/share/nginx/html。  
 > /data/nginx/conf/nginx.conf:/etc/nginx/nginx.conf：将我们自己创建的 nginx.conf 挂载到容器的 /etc/nginx/nginx.conf。  
 > /data/nginx/logs:/var/log/nginx：将我们自己创建的 logs 挂载到容器的 /var/log/nginx。  
   
+## 修改配置文件  
 打开nginx.conf  
 `sudo vi /data/nginx/conf/nginx.conf`  
 内容如下：  
@@ -71,5 +66,6 @@ http {
   }
 
 ```
-
-把前端的静态文件放到/data/staic 下就可以访问了。  
+## 修改成功后重启nginx容器  
+`docker restart nginx`  
+把前端的静态文件放到/data/nginx/html 下就可以访问了。  
