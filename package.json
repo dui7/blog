@@ -1,7 +1,7 @@
 {
-  "name": "note.wenboz.com",
+  "name": "blog.ruciya.com",
   "version": "1.0.0",
-  "description": "Code Note.",
+  "description": "Note.",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -12,8 +12,8 @@
     "build": "vuepress build docs",
     "deploy": "bash deploy.sh"
   },
-  "author": "boboidream",
-  "repository": "github:boboidream/note",
+  "author": "ruciya",
+  "repository": "https://github.com/zcorleone/note/",
   "license": "ISC",
   "devDependencies": {
     "vuepress": "^1.7.1",

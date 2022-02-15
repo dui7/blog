@@ -21,6 +21,6 @@ git commit -m 'update'
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>  REPO=github上的项目
 # git push -f git@github.com:<USERNAME>/vuepress.git master:master
-git push -f https://github.com/qq24566664/qq24566664.github.io.git master
+git push -f https://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@github.com/fentiaozi/qq24566664.github.io.git master
 
 cd -

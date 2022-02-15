@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /assets/img/photo.jpg
+heroImage: /assets/img/salute.jpg
 # actionText: 学习 →
 # actionLink: /笔记/
 # features:

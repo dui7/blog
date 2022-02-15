@@ -8,7 +8,7 @@
 `mkdir -p /data/nginx/html /data/nginx/conf /data/nginx/logs`   
 
 ## 启动一个有挂载目录的镜像  
-`docker run -d -p 80:80 --name nginx -v /data/nginx/html:/usr/share/nginx/html -v /data/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /data/nginx/logs:/var/log/nginx nginx  
+`docker run -d -p 80:80 --name nginx -v /Users/keliang/docker/data/nginx/html:/usr/share/nginx/html -v /Users/keliang/docker/data/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /Users/keliang/docker/data/nginx/logs:/var/log/nginx nginx
 `
 > -p 80:80： 将容器的 80 端口映射到主机的 80 端口。  
 > --name nginx：将容器命名为 nginx。  

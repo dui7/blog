@@ -50,6 +50,6 @@ mysql是NAME
 `mkdir -p /docker/mysql/{conf,data,log}`
 
 ### 安装5.7.27版本的mysql
-`sudo docker run -d -p 33061:3306 --restart always -e MYSQL_ROOT_PASSWORD=root --name mysql -v /docker/mysql/conf/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf -v /docker/mysql/data:/var/lib/mysql -v /etc/localtime:/etc/localtime:ro -v /etc/timezone:/etc/timezone:ro mysql:5.7.27`
+`sudo docker run -d -p 33061:3306 --restart always -e MYSQL_ROOT_PASSWORD=root --name mysql -v /docker/mysql/log:/var/log/mysql -v /docker/mysql/conf:/etc/mysql -v /docker/mysql/data:/var/lib/mysql -v /etc/localtime:/etc/localtime:ro -v /etc/timezone:/etc/timezone:ro mysql:5.7.27`
 
   

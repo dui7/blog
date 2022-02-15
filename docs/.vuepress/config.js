@@ -1,5 +1,5 @@
 module.exports = {
-  title: '首页',
+  title: ' ',
   description: ' ',
   head: [
     ['link', { rel: 'icon', href: '/assets/img/photo.jpg' }],
