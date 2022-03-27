@@ -1,7 +1,7 @@
 {
   "name": "blog.ruciya.com",
   "version": "1.0.0",
-  "description": "Note.",
+  "description": "blog",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -12,13 +12,16 @@
     "build": "vuepress build docs",
     "deploy": "bash deploy.sh"
   },
-  "author": "ruciya",
-  "repository": "https://github.com/zcorleone/note/",
-  "license": "ISC",
+  "author": "fentiaozi",
   "devDependencies": {
-    "vuepress": "^1.7.1",
+    "vuepress": "^1.9.7",
     "vuepress-plugin-autobar": "github:boboidream/vuepress-bar",
+    "vuepress-plugin-nuggets-style-copy": "^1.0.3",
     "vuepress-plugin-permalink-pinyin": "^1.0.0",
     "vuepress-plugin-rpurl": "github:boboidream/vuepress-plugin-rpurl"
+  },
+  "dependencies": {
+    "@vuepress/core": "^1.9.7",
+    "screenfull": "^5.1.0"
   }
 }
