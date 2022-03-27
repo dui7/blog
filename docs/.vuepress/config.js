@@ -5,6 +5,10 @@ module.exports = {
     description: ' ',
     head: [
         ['link', {rel: 'icon', href: '/assets/img/photo.jpg'}],
+        ["meta", {"http-equiv": "Cache-Control", content: "no-cache, no-store, must-revalidate"}],
+        ["meta", {"http-equiv": "Pragma", content: "no-cache"}],
+        ["meta", {"http-equiv": "Expires", content: "0"}],
+        ["meta", {name: "apple-mobile-web-app-capable", content: "yes"}]
     ],
     base: '/',
     markdown: {
