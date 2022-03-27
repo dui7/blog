@@ -42,8 +42,8 @@
               <div class="icon-arrow"></div>
               <div class="scroll-box" style="text-align:center" >
                 <span style="font-size:0.9rem">微信扫一扫</span>
-                <img v-bind="{src: 'https://api.qrserver.com/v1/create-qr-code/?data=http://192.168.3.69:8080'+this.$route.fullPath }" height="180px" style="margin:10px;"/>
-                可以<b>手机看</b>或分享至<b>朋友圈</b>
+                <img v-bind="{src: 'https://api.qrserver.com/v1/create-qr-code/?data=http://blog.ruciya.com'+this.$route.fullPath }" height="180px" style="margin:10px;"/>
+                可以<b>手机看</b>
               </div>
             </div>
         </div>
