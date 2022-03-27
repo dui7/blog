@@ -47,13 +47,13 @@ module.exports = {
                 content: "复制成功"
             }
         }],
-        // [
-        //     '@vuepress-reco/vuepress-plugin-kan-ban-niang',
-        //     {
-        //         theme: ['blackCat'],
-        //         clean: true,
-        //     }
-        // ],
+        [
+            '@vuepress-reco/vuepress-plugin-kan-ban-niang',
+            {
+                theme: ['blackCat'],
+                clean: true,
+            }
+        ],
         'permalink-pinyin',
         ['autobar', {'pinyinNav': true}],
         'rpurl'
