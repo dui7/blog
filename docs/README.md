@@ -12,7 +12,8 @@ heroImage: /assets/img/salute.jpg
   # details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
 # footer: GPL Licensed | Copyright © 2022-ruciya 
 ---
+[//]: # (<div style="text-align:center;padding:30px 15px;">)
 
-#<div style="text-align:center;padding:30px 15px;">
-#    Copyright © 2020-2022-ruciya <a href="http://beian.miit.gov.cn" target="_blank">京ICP备20012056号-1</a>
-#</div>
+[//]: # (    Copyright © 2020-2022-ruciya <a href="http://beian.miit.gov.cn" target="_blank">京ICP备20012056号-1</a>)
+
+[//]: # (</div>)
