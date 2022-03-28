@@ -1,4 +1,13 @@
-const barHelper = require('./utils/barHelper.js');
+const getConfig = require("vuepress-bar");
+const options = {
+    maxLevel: 2,
+    multipleSideBar: true,
+    addReadMeToFirstGroup: false,
+    pinyinNav: true
+  };
+  
+// const { nav, sidebar } = getConfig();
+const { nav, sidebar } = getConfig(options); // Use default location of `.vuepress`: `${__dirname}/..`
 
 module.exports = {
     title: ' ',
@@ -15,23 +24,9 @@ module.exports = {
         lineNumbers: true // 代码块是否显示行号
     },
     themeConfig: {
+        nav, 
+        sidebar: filterBlank(sidebar),
         logo: '/assets/img/photo.jpg',
-        // nav: [
-        //     {
-        //         text: '导航1', link: '/nav.10./*.md'
-        //     },
-        //     {
-        //         text: 'Java',
-        //         items: [
-        //             {
-        //                 text: '下拉1',
-        //                 link: '/nav.10./*.md'
-        //             }]
-        //     }
-        // ],
-        nav: [
-        ],
-
         docsDir: '/',
         // lastUpdated: 'Last Updated',
     },
@@ -41,12 +36,6 @@ module.exports = {
         //     shape: 'star', // ['star' | 'circle'], // shape of the particle, default: 'star'
         //     zIndex: 999999999, // z-index property of the canvas, default: 999999999
         // }],
-        ["vuepress-plugin-nuggets-style-copy", {
-            copyText: "复制代码",
-            tip: {
-                content: "复制成功"
-            }
-        }],
         // [
         //     '@vuepress-reco/vuepress-plugin-kan-ban-niang',
         //     {
@@ -54,8 +43,13 @@ module.exports = {
         //         clean: true,
         //     }
         // ],
+        ["vuepress-plugin-nuggets-style-copy", {
+            copyText: "复制代码",
+            tip: {
+                content: "复制成功"
+            }
+        }],
         'permalink-pinyin',
-        ['autobar', {'pinyinNav': true}],
         'rpurl'
     ],
     chainWebpack: config => {
@@ -74,4 +68,13 @@ module.exports = {
 
         }
     },
+}
+
+//把空的README.md不显示在侧边栏
+function filterBlank(sideBardto) {
+    Object.keys(sideBardto).forEach((key) =>
+        sideBardto[key] = sideBardto[key].filter(Boolean)
+    );
+
+    return sideBardto
 }

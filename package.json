@@ -15,13 +15,13 @@
   "author": "fentiaozi",
   "devDependencies": {
     "vuepress": "^1.9.7",
-    "vuepress-plugin-autobar": "github:boboidream/vuepress-bar",
     "vuepress-plugin-nuggets-style-copy": "^1.0.3",
     "vuepress-plugin-permalink-pinyin": "^1.0.0",
     "vuepress-plugin-rpurl": "github:boboidream/vuepress-plugin-rpurl"
   },
   "dependencies": {
     "@vuepress/core": "^1.9.7",
-    "screenfull": "^5.1.0"
+    "screenfull": "^5.1.0",
+    "vuepress-bar": "^0.4.4"
   }
 }
