@@ -24,7 +24,7 @@ module.exports = {
         lineNumbers: true // 代码块是否显示行号
     },
     themeConfig: {
-        nav, 
+        nav: [...nav, { text: 'Github', link: 'https://github.com/fentiaozi'}],
         sidebar: filterBlank(sidebar),
         logo: '/assets/img/photo.jpg',
         docsDir: '/',
