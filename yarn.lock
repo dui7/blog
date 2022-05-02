@@ -1193,6 +1193,11 @@
   optionalDependencies:
     prettier "^1.18.2"
 
+"@vuepress-reco/vuepress-plugin-kan-ban-niang@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.npmmirror.com/@vuepress-reco/vuepress-plugin-kan-ban-niang/-/vuepress-plugin-kan-ban-niang-1.0.5.tgz#73b47094f1a07af05923fe9ae6c25a4c33586168"
+  integrity sha512-ufqpOw0zhLxv3PvoYlHTsjmG4CFiCaQ8dnf950Ov7JmajKgpAMarZ3ObB+xi5ex0sgetxU82YSf+CptQceXQIw==
+
 "@vuepress/core@1.9.7", "@vuepress/core@^1.9.7":
   version "1.9.7"
   resolved "https://registry.npmmirror.com/@vuepress/core/-/core-1.9.7.tgz#a23388377f84322b933fc97b6cca32a90d8f5ce2"

@@ -14,6 +14,7 @@
   },
   "author": "fentiaozi",
   "devDependencies": {
+    "@vuepress-reco/vuepress-plugin-kan-ban-niang": "^1.0.5",
     "vuepress": "^1.9.7",
     "vuepress-plugin-nuggets-style-copy": "^1.0.3",
     "vuepress-plugin-permalink-pinyin": "^1.0.0",

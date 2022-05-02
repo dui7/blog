@@ -5,7 +5,7 @@ const options = {
     addReadMeToFirstGroup: false,
     pinyinNav: true
   };
-  
+
 // const { nav, sidebar } = getConfig();
 const { nav, sidebar } = getConfig(options); // Use default location of `.vuepress`: `${__dirname}/..`
 
@@ -36,19 +36,19 @@ module.exports = {
         //     shape: 'star', // ['star' | 'circle'], // shape of the particle, default: 'star'
         //     zIndex: 999999999, // z-index property of the canvas, default: 999999999
         // }],
-        // [
-        //     '@vuepress-reco/vuepress-plugin-kan-ban-niang',
-        //     {
-        //         theme: ['blackCat'],
-        //         clean: true,
-        //     }
-        // ],
         ["vuepress-plugin-nuggets-style-copy", {
             copyText: "复制代码",
             tip: {
                 content: "复制成功"
             }
         }],
+        [
+            '@vuepress-reco/vuepress-plugin-kan-ban-niang',
+            {
+                theme: ['blackCat'],
+                clean: true,
+            }
+        ],
         'permalink-pinyin',
         'rpurl'
     ],
